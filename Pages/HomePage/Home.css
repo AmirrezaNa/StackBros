@@ -1,0 +1,227 @@
+/*Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+img{
+    max-width: 100%;
+}
+
+
+
+/*---------------                  body            ---------------------------*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+/*---------------              hero section               ---------------------*/
+.hero{
+    min-height: 90vh;
+    background-image: url("https://static.wixstatic.com/media/7add36_28b2355858ac420285e9af79b35234d8~mv2.jpg/v1/fill/w_1351,h_1021,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/7add36_28b2355858ac420285e9af79b35234d8~mv2.jpg");
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    
+}
+
+.hero-content{
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 800px;
+
+}
+
+.hero-content h1{
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.hero-content p{
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.hero-content button{
+    font-size: 18px;
+    background-color: rgb(197, 150, 20);
+    color: black;
+
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-content button:hover{
+    background-color: black;
+    color: rgb(255, 200, 50);
+}
+
+
+
+/*-------------------              history              -------------------*/
+.history{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: black;
+    color: white;
+    gap: 30px;
+    padding: 80px 20px;
+
+}
+
+.history-image img{
+    width: 500px;
+    border-radius: 15px;
+
+    display: block;
+}
+
+.history-content{
+    max-width: 500px;
+}
+
+.history-content h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.history-content p{
+    font-size: 16px;
+    line-height: 1.6;
+
+}
+
+
+
+/*-------------------              footer              -------------------*/
+.footer{
+    background-color: black;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 100px 60px;
+
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+.footer-links,
+.footer-info,
+.hours{
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.footer-links a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+
+.footer-links a:hover{
+    color: rgb(255, 200, 50);
+}
+
+
+.footer-info p{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.hours p{
+    font-size: 14px;
+}
+
+
+
+
+
+/*-------------------              responsive(phone)              -------------------*/
+@media (max-width: 600px) {
+
+    /*-------------------              hero              -------------------*/
+    .hero{
+        padding: 20px;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .hero-content{
+        padding: 25px;
+    }
+
+    .hero-content h1{
+        font-size: 32px;
+    }
+
+    .hero-content p{
+        font-size: 18px;
+    }
+
+    .hero-content button{
+        width: 100%;
+    }
+
+
+    /*-------------------              history              -------------------*/
+    .history{
+        flex-direction: column;
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+
+    .history-content h2{
+        font-size: 28px;
+    }
+
+
+    /*-------------------              footer              -------------------*/
+    .footer{
+        flex-direction: column;
+        gap: 40px;
+
+        padding: 50px 20px;
+        text-align: center;
+        align-items: center;
+    }
+    
+}
+
+
+
+
+/*-------------------              responsive(tablet)              -------------------*/
+@media (max-width: 1024px){
+
+}

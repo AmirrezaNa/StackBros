@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<link rel="stylesheet" href="../header.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STACK BROS! - Startseite</title>
+    <link rel="shortcut icon" href="../../images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="Home.css">
+</head>
+
+<body data-page-title="navHome">
+    <header class="header">
+        <div class="logo">
+            <img src="../../images/logo.png" alt="Restaurant Logo" width="100">
+            <h1>STACK BROS!</h1>
+        </div>
+
+        <div>
+            <nav class="navbar">
+                <a href="../HomePage/Home.html" data-i18n="navHome">Startseite</a>
+                <a href="../MenuPage/Menu.html" data-i18n="navMenu">Speisekarte</a>
+                <a href="../ContactUsPage/ContactUs.html" data-i18n="navContact">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-image"></div>
+
+            <div class="hero-content">
+                <h1 data-i18n="homeHeroTitle">Willkommen bei STACK BROS!</h1>
+                <p data-i18n="homeHeroText">Frische Croques, Burger und Beilagen in Hamburg.</p>
+                <button onclick="window.location.href='../MenuPage/Menu.html'" data-i18n="viewMenu">Speisekarte ansehen</button>
+            </div>
+        </section>
+
+        <section class="history">
+            <div class="history-image">
+                <img src="../../images/OurHistoryPic.png" alt="Page History Image">
+            </div>
+
+            <div class="history-content">
+                <h2 data-i18n="historyTitle">Unsere Geschichte</h2>
+                <p data-i18n="historyText1">STACK BROS empfängt seit Jahren Gäste mit authentischem Essen, herzlicher Gastfreundschaft und einer gemütlichen Atmosphäre.</p>
+                <p data-i18n="historyText2">Heute verbinden wir frische Zutaten, beliebte Klassiker und freundlichen Service zu einem besonderen Erlebnis für jeden Gast.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#" data-i18n="jobs">Jobs</a>
+            <a href="#" data-i18n="gallery">Galerie</a>
+            <a href="../ContactUsPage/ContactUs.html" data-i18n="navContact">Kontakt</a>
+        </div>
+
+        <div class="footer-info">
+            <p><span data-i18n="phoneNumber">Telefonnummer:</span><br>+49 123 456 789</p>
+            <p><span data-i18n="address">Adresse:</span><br>Heinrich-Hertz-Straße 102, 22083 Hamburg</p>
+        </div>
+
+        <div class="hours">
+            <p>
+                <span data-i18n="openingHours">Öffnungszeiten:</span><br><br>
+                <span data-i18n="weekdays">Montag - Freitag:</span><br>
+                11:00 - 22:00<br><br>
+                <span data-i18n="weekend">Samstag - Sonntag:</span><br>
+                12:00 - 23:00
+            </p>
+        </div>
+    </footer>
+
+    <script src="../Language.js"></script>
+</body>
+</html>

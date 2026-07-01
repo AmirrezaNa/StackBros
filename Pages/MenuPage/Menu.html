@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<link rel="stylesheet" href="../header.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STACK BROS! - Speisekarte</title>
+    <link rel="shortcut icon" href="../../images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="Menu.css">
+</head>
+
+<body data-page-title="navMenu">
+    <header class="header">
+        <div class="logo">
+            <img src="../../images/logo.png" alt="STACK BROS Logo" width="100">
+            <h1>STACK BROS!</h1>
+        </div>
+
+        <div>
+            <nav class="navbar">
+                <a href="../HomePage/Home.html" data-i18n="navHome">Startseite</a>
+                <a href="../MenuPage/Menu.html" data-i18n="navMenu">Speisekarte</a>
+                <a href="../ContactUsPage/ContactUs.html" data-i18n="navContact">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="menu-hero">
+        <h1 data-i18n="menuHeroTitle">Unsere Speisekarte</h1>
+        <p data-i18n="menuHeroText">Croques, Burger und Beilagen frisch für dich gemacht.</p>
+    </section>
+
+    <main class="menu-section">
+        <div class="menu-categories" aria-label="Speisekarte Kategorien">
+            <button class="category-btn active" type="button" data-filter="all" data-i18n="all">Alle</button>
+            <button class="category-btn" type="button" data-filter="croque" data-i18n="croques">Croques</button>
+            <button class="category-btn" type="button" data-filter="burger" data-i18n="burgers">Burger</button>
+            <button class="category-btn" type="button" data-filter="sides" data-i18n="sides">Beilagen</button>
+        </div>
+
+        <div id="menu-list"></div>
+    </main>
+
+    <footer class="footer">
+        <p data-i18n="rights">© 2026 STACK BROS. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script src="../Language.js"></script>
+    <script src="Menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(0, 0, 0, 0.92);
+    color: white;
+}
+
+.menu-hero{
+    min-height: 55vh;
+    background-image: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.7)), url(../../images/Menu-banner2.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 90px 20px;
+    color: rgb(197, 150, 20);
+}
+
+.menu-hero h1{
+    font-size: 56px;
+    margin-bottom: 15px;
+}
+
+.menu-hero p{
+    font-size: 20px;
+    max-width: 650px;
+    color: #f0d58a;
+}
+
+.menu-section{
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 50px 20px 70px;
+}
+
+.menu-categories{
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color: rgba(0,0,0,0.92);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 18px 10px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.category-btn{
+    background-color: #1e1e1e;
+    color: white;
+    border: 2px solid rgb(197, 150, 20);
+    padding: 10px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.category-btn:hover,
+.category-btn.active{
+    background-color: rgb(197, 150, 20);
+    color: black;
+}
+
+.menu-group{
+    margin-bottom: 55px;
+    scroll-margin-top: 90px;
+}
+
+.menu-group.hidden{
+    display: none;
+}
+
+.menu-group-heading{
+    margin-bottom: 18px;
+    padding-left: 16px;
+    border-left: 4px solid rgb(197, 150, 20);
+}
+
+.menu-group-heading .eyebrow{
+    color: rgb(197, 150, 20);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.menu-group-heading h2{
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.menu-group-heading p{
+    color: #cfcfcf;
+    line-height: 1.5;
+}
+
+.menu-table{
+    background-color: #151515;
+    border: 1px solid #333;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+.menu-table-head,
+.menu-row{
+    display: grid;
+    gap: 18px;
+    align-items: center;
+}
+
+.croque-table .menu-table-head,
+.croque-table .menu-row{
+    grid-template-columns: minmax(0, 1fr) 90px 100px 90px;
+}
+
+.single-price-table .menu-table-head,
+.single-price-table .menu-row{
+    grid-template-columns: minmax(0, 1fr) 110px;
+}
+
+.menu-table-head{
+    background-color: #050505;
+    color: rgb(197, 150, 20);
+    padding: 14px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.menu-row{
+    padding: 18px 20px;
+    border-top: 1px solid #2c2c2c;
+}
+
+.menu-row h3{
+    font-size: 21px;
+    margin-bottom: 6px;
+}
+
+.menu-row p{
+    color: #bcbcbc;
+    line-height: 1.5;
+}
+
+.menu-row > span{
+    color: rgb(197, 150, 20);
+    font-weight: bold;
+    font-size: 18px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.badge{
+    display: inline-block;
+    background-color: rgb(197, 150, 20);
+    color: black;
+    font-size: 12px;
+    border-radius: 999px;
+    padding: 3px 8px;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+.footer{
+    background-color: black;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 760px){
+    .menu-hero{
+        min-height: 45vh;
+        padding: 65px 15px;
+    }
+
+    .menu-hero h1{
+        font-size: 36px;
+    }
+
+    .menu-hero p{
+        font-size: 16px;
+    }
+
+    .menu-section{
+        padding: 35px 12px 55px;
+    }
+
+    .menu-categories{
+        position: static;
+        gap: 10px;
+    }
+
+    .category-btn{
+        font-size: 14px;
+        padding: 9px 15px;
+    }
+
+    .menu-group-heading h2{
+        font-size: 28px;
+    }
+
+    .menu-table-head{
+        display: none;
+    }
+
+    .croque-table .menu-row,
+    .single-price-table .menu-row{
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .menu-row{
+        padding: 18px;
+    }
+
+    .menu-row > span{
+        text-align: left;
+    }
+
+    .menu-row > span::before{ content: attr(data-label) ": "; color: #ddd; }
+}

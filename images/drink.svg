@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650">
+  <rect width="900" height="650" fill="#111111"/>
+  <circle cx="690" cy="125" r="78" fill="#c59614" opacity="0.95"/>
+  <path d="M345 178h240l-42 345c-5 41-39 72-81 72h-42c-42 0-76-31-81-72l-42-345z" fill="#222222" stroke="#c59614" stroke-width="18"/>
+  <path d="M326 245h276" stroke="#c59614" stroke-width="16"/>
+  <path d="M382 178l-44-108h-78" stroke="#ffffff" stroke-width="18" stroke-linecap="round" fill="none" opacity="0.9"/>
+  <path d="M407 345c24 26 70 26 94 0" stroke="#c59614" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <text x="450" y="90" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="48" font-weight="700" text-anchor="middle">DRINKS</text>
+</svg>

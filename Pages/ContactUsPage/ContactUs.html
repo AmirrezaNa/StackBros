@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<link rel="stylesheet" href="../header.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STACK BROS! - Kontakt</title>
+    <link rel="shortcut icon" href="../../images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="ContactUs.Css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body data-page-title="contactTitle">
+    <header class="header">
+        <div class="logo">
+            <img src="../../images/logo.png" alt="Restaurant Logo" width="100">
+            <h1>STACK BROS!</h1>
+        </div>
+        <div>
+            <nav class="navbar">
+                <a href="../HomePage/Home.html" data-i18n="navHome">Startseite</a>
+                <a href="../MenuPage/Menu.html" data-i18n="navMenu">Speisekarte</a>
+                <a href="../ContactUsPage/ContactUs.html" data-i18n="navContact">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-banner">
+        <h1 data-i18n="contactHeroTitle">Kontaktieren Sie uns</h1>
+        <p data-i18n="contactHeroText">Wir freuen uns auf Ihre Nachricht oder Ihren Besuch.</p>
+    </section>
+
+    <section class="contact-container">
+        <div class="contact-info">
+            <div class="info-box">
+                <h2>📞 <span data-i18n="phoneNumber">Telefonnummer:</span></h2>
+                <p>+49 123 456 789</p>
+            </div>
+
+            <div class="info-box">
+                <h2>📍 <span data-i18n="address">Adresse:</span></h2>
+                <p>Heinrich-Hertz-Straße 102 <br>22083 Hamburg, Germany</p>
+            </div>
+
+            <div class="info-box">
+                <h2>🕒 <span data-i18n="openingHours">Öffnungszeiten:</span></h2>
+                <p>
+                    <span data-i18n="weekdays">Montag - Freitag:</span><br>
+                    10:00 - 23:00<br><br>
+                    <span data-i18n="weekend">Samstag - Sonntag:</span><br>
+                    12:00 - 24:00
+                </p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2 data-i18n="contactHeroTitle">Kontaktieren Sie uns</h2>
+            <form action="mailto:info@stackbros.de" method="post" enctype="text/plain">
+                <input type="text" placeholder="Ihr Name" data-i18n-placeholder="fullName" required>
+                <input type="email" placeholder="Ihre E-Mail" data-i18n-placeholder="yourEmail" required>
+                <input type="text" placeholder="Betreff" data-i18n-placeholder="subject">
+                <textarea placeholder="Ihre Nachricht" data-i18n-placeholder="yourMessage" rows="6" required></textarea>
+                <button type="submit" data-i18n="sendMessage">Nachricht senden</button>
+            </form>
+
+            <div class="social-links">
+                <h3 data-i18n="followUs">Folgen Sie uns</h3>
+                <a href="#"><img src="../../images/instagram-brands-solid.png" alt="Instagram Icon" width="20"> Instagram</a>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2369.1383833600776!2d10.024419784545898!3d53.57314682006836!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18ecdec26be77%3A0xcdbccaf25858c64a!2sHeinrich-Hertz-Stra%C3%9Fe%20102%2C%2022083%20Hamburg%2C%20Germany!5e0!3m2!1sen!2s!4v1780092032327!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p data-i18n="rights">© 2026 STACK BROS. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script src="../Language.js"></script>
+</body>
+</html>
