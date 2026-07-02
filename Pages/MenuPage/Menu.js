@@ -38,9 +38,9 @@ const MENU_GROUPS = [
             { name: { de: "Croque Ziegenkäse", en: "Goat Cheese Croque" }, desc: { de: "Ziegenkäse und Tomate", en: "Goat cheese and tomato" }, prices: ["8,50 €", "12,00 €", "17,00 €"] },
             { name: { de: "Croque Mozzarella", en: "Mozzarella Croque" }, desc: { de: "Mozzarella und Tomate", en: "Mozzarella and tomato" }, prices: ["8,50 €", "12,00 €", "17,00 €"] },
             { name: { de: "Croque Camembert", en: "Camembert Croque" }, desc: { de: "Camembert und Preiselbeeren", en: "Camembert and cranberries" }, prices: ["8,50 €", "12,00 €", "17,00 €"] },
-            { name: { de: "Croque Falafel", en: "Falafel Croque" }, isNew: true, desc: { de: "Falafel, Tomate, Ketchup, Edamer und Salat nach Wahl", en: "Falafel, tomato, ketchup, Edam cheese, and salad of your choice" }, prices: ["8,50 €", "12,00 €", "17,00 €"] },
-            { name: { de: "Croque Avocado", en: "Avocado Croque" }, isNew: true, desc: { de: "Avocado, optional Hähnchen oder Tackofleisch, und Salat nach Wahl", en: "Avocado, optional chicken or taco meat, and salad of your choice" }, prices: ["8,50 €", "12,00 €", "17,00 €"] },
-            { name: { de: "Croque Kräuter-Omelette", en: "Herb Omelette Croque" }, isNew: true, desc: { de: "Kräuter-Omelette mit Ei, Gewürzgurke und Tomate", en: "Herb omelette with egg, pickled cucumber, and tomato" }, prices: ["8,50 €", "12,00 €", "17,00 €"] }
+            { name: { de: "Croque Falafel", en: "Falafel Croque" }, isNew: false, desc: { de: "Falafel, Tomate, Ketchup, Edamer und Salat nach Wahl", en: "Falafel, tomato, ketchup, Edam cheese, and salad of your choice" }, prices: ["8,50 €", "12,00 €", "17,00 €"] },
+            { name: { de: "Croque Avocado", en: "Avocado Croque" }, isNew: false, desc: { de: "Avocado, optional Hähnchen oder Tackofleisch, und Salat nach Wahl", en: "Avocado, optional chicken or taco meat, and salad of your choice" }, prices: ["8,50 €", "12,00 €", "17,00 €"] },
+            { name: { de: "Croque Kräuter-Omelette", en: "Herb Omelette Croque" }, isNew: false, desc: { de: "Kräuter-Omelette mit Ei, Gewürzgurke und Tomate", en: "Herb omelette with egg, pickled cucumber, and tomato" }, prices: ["8,50 €", "12,00 €", "17,00 €"] }
         ]
     },
     {
@@ -55,8 +55,8 @@ const MENU_GROUPS = [
         items: [
             { name: { de: "Croque Crispy Chicken", en: "Crispy Chicken Croque" }, desc: { de: "Crispy Chicken, Tomate, Jalapenos und Chesterkäse", en: "Crispy chicken, tomato, jalapeños, and Chester cheese" }, prices: ["9,00 €", "12,50 €", "18,00 €"] },
             { name: { de: "Croque Spicy Chicken", en: "Spicy Chicken Croque" }, desc: { de: "Spicy Chicken, Tomate, rote Zwiebeln und Edamer", en: "Spicy chicken, tomato, red onions, and Edam cheese" }, prices: ["9,00 €", "12,50 €", "18,00 €"] },
-            { name: { de: "Croque Steak", en: "Steak Croque" }, isNew: true, desc: { de: "Rinder-Steak, Champignons, Jalapenos, BBQ-Sauce und Cheddar", en: "Beef steak, mushrooms, jalapeños, BBQ sauce, and cheddar" }, prices: ["9,00 €", "12,50 €", "18,00 €"] },
-            { name: { de: "Croque Cheese Paradise", en: "Cheese Paradise Croque" }, isNew: true, desc: { de: "Mozzarella, Sulguni, Cheddar oder Edamer und Salat nach Wahl", en: "Mozzarella, sulguni, cheddar or Edam cheese, and salad of your choice" }, prices: ["9,00 €", "12,50 €", "18,00 €"] }
+            { name: { de: "Croque Steak", en: "Steak Croque" }, isNew: false, desc: { de: "Rinder-Steak, Champignons, Jalapenos, BBQ-Sauce und Cheddar", en: "Beef steak, mushrooms, jalapeños, BBQ sauce, and cheddar" }, prices: ["9,00 €", "12,50 €", "18,00 €"] },
+            { name: { de: "Croque Cheese Paradise", en: "Cheese Paradise Croque" }, isNew: false, desc: { de: "Mozzarella, Sulguni, Cheddar oder Edamer und Salat nach Wahl", en: "Mozzarella, sulguni, cheddar or Edam cheese, and salad of your choice" }, prices: ["9,00 €", "12,50 €", "18,00 €"] }
         ]
     },
     {
@@ -89,9 +89,9 @@ const MENU_GROUPS = [
             { name: { de: "Pommes", en: "Fries" }, desc: { de: "Klassische goldgelb frittierte Kartoffelstäbchen", en: "Classic golden-yellow fried potato sticks" }, prices: ["3,90 €"] },
             { name: { de: "Süßkartoffel-Pommes", en: "Sweet Potato Fries" }, desc: { de: "Frittierte Süßkartoffel-Pommes", en: "Fried sweet potato fries" }, prices: ["5,60 €"] },
             { name: { de: "Chilicheese Nuggets", en: "Chili Cheese Nuggets" }, desc: { de: "Frittierte Nuggets mit cremigem Käse und scharfen Jalapeños", en: "Fried nuggets filled with creamy cheese and spicy jalapeños" }, prices: ["4,90 €"] },
-            { name: { de: "Onion Rings", en: "Onion Rings" }, isNew: true, desc: { de: "Panierte und frittierte Zwiebelringe", en: "Battered and fried onion rings" }, prices: ["4,50 €"] },
-            { name: { de: "Cheese Fries", en: "Cheese Fries" }, isNew: true, desc: { de: "Pommes mit geschmolzenem Käse", en: "Fries with melted cheese" }, prices: ["5,20 €"] },
-            { name: { de: "Truffle Cheese Fries", en: "Truffle Cheese Fries" }, isNew: true, desc: { de: "Premium-Pommes mit geschmolzenem Käse und feinem Trüffelöl", en: "Premium fries with melted cheese and fine truffle oil" }, prices: ["6,50 €"] }
+            { name: { de: "Onion Rings", en: "Onion Rings" }, isNew: false, desc: { de: "Panierte und frittierte Zwiebelringe", en: "Battered and fried onion rings" }, prices: ["4,50 €"] },
+            { name: { de: "Cheese Fries", en: "Cheese Fries" }, isNew: false, desc: { de: "Pommes mit geschmolzenem Käse", en: "Fries with melted cheese" }, prices: ["5,20 €"] },
+            { name: { de: "Truffle Cheese Fries", en: "Truffle Cheese Fries" }, isNew: false, desc: { de: "Premium-Pommes mit geschmolzenem Käse und feinem Trüffelöl", en: "Premium fries with melted cheese and fine truffle oil" }, prices: ["6,50 €"] }
         ]
     }
 ];
@@ -116,7 +116,7 @@ function renderMenu() {
     if (!container) return;
 
     const language = currentLanguage();
-    // const newLabel = language === "en" ? "NEW" : "NEU";
+    const newLabel = language === "en" ? "NEW" : "NEU";
 
     container.innerHTML = MENU_GROUPS.map(group => {
         const isCroque = group.type === "croque";
@@ -126,7 +126,7 @@ function renderMenu() {
             : [text(group.title, language), language === "en" ? "Price" : "Preis"];
 
         const rows = group.items.map(item => {
-            // const badge = item.isNew ? ` <span class="badge">${newLabel}</span>` : "";
+            const badge = item.isNew ? ` <span class="badge">${newLabel}</span>` : "";
             const prices = item.prices.map((price, index) => `<span data-label="${priceLabel(index, group.type, language)}">${price}</span>`).join("");
             return `
                 <article class="menu-row">
