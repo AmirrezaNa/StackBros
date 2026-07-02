@@ -116,7 +116,7 @@ function renderMenu() {
     if (!container) return;
 
     const language = currentLanguage();
-    const newLabel = language === "en" ? "NEW" : "NEU";
+    // const newLabel = language === "en" ? "NEW" : "NEU";
 
     container.innerHTML = MENU_GROUPS.map(group => {
         const isCroque = group.type === "croque";
@@ -126,7 +126,7 @@ function renderMenu() {
             : [text(group.title, language), language === "en" ? "Price" : "Preis"];
 
         const rows = group.items.map(item => {
-            const badge = item.isNew ? ` <span class="badge">${newLabel}</span>` : "";
+            // const badge = item.isNew ? ` <span class="badge">${newLabel}</span>` : "";
             const prices = item.prices.map((price, index) => `<span data-label="${priceLabel(index, group.type, language)}">${price}</span>`).join("");
             return `
                 <article class="menu-row">
