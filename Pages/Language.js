@@ -6,7 +6,6 @@ const TRANSLATIONS = {
         navHome: "Startseite",
         navMenu: "Speisekarte",
         navContact: "Kontakt",
-        languageLabel: "Sprache",
 
         homeHeroTitle: "Willkommen bei STACK BROS!",
         homeHeroText: "Frische Croques, Burger und Beilagen in Hamburg.",
@@ -51,7 +50,6 @@ const TRANSLATIONS = {
         navHome: "Home",
         navMenu: "Menu",
         navContact: "Contact Us",
-        languageLabel: "Language",
 
         homeHeroTitle: "Welcome to STACK BROS!",
         homeHeroText: "Fresh croques, burgers, and sides in Hamburg.",
@@ -135,34 +133,28 @@ function applyTranslations() {
         document.title = `STACK BROS! - ${t(titleKey)}`;
     }
 
-    const languageSelect = document.getElementById("language-select");
-    if (languageSelect) {
-        languageSelect.value = language;
-    }
+    document.querySelectorAll(".language-option").forEach(option => {
+        option.classList.toggle("active", option.dataset.lang === language);
+    });
 }
 
 function createLanguageSwitcher() {
-    if (document.getElementById("language-select")) {
+    const wrapper = document.querySelector(".language-switcher");
+
+    if (!wrapper) {
         return;
     }
 
-    const nav = document.querySelector(".navbar");
-    const target = nav || document.body;
-
-    const wrapper = document.createElement("label");
-    wrapper.className = "language-switcher";
     wrapper.innerHTML = `
-        <span data-i18n="languageLabel">Sprache</span>
-        <select id="language-select" aria-label="Language selector">
-            <option value="de">Deutsch</option>
-            <option value="en">English</option>
-        </select>
+        <span class="language-option" data-lang="de">DE</span>
+        <span class="language-divider">|</span>
+        <span class="language-option" data-lang="en">EN</span>
     `;
 
-    target.appendChild(wrapper);
-
-    wrapper.querySelector("select").addEventListener("change", event => {
-        setCurrentLanguage(event.target.value);
+    wrapper.querySelectorAll(".language-option").forEach(option => {
+        option.addEventListener("click", () => {
+            setCurrentLanguage(option.dataset.lang);
+        });
     });
 }
 

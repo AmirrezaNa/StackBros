@@ -14,15 +14,24 @@
 <body data-page-title="contactTitle">
     <header class="header">
         <div class="logo">
-            <img src="../../images/main-logo.jpg" alt="Restaurant Logo" width="100">
+            <img src="../../images/main-logo.jpg" alt="STACK BROS Logo" width="100">
             <h1>STACK BROS!</h1>
         </div>
-        <div>
-            <nav class="navbar">
-                <a href="../HomePage/Home.html" data-i18n="navHome">Startseite</a>
-                <a href="../MenuPage/Menu.html" data-i18n="navMenu">Speisekarte</a>
-                <a href="../ContactUsPage/ContactUs.html" data-i18n="navContact">Kontakt</a>
-            </nav>
+
+        <nav class="navbar">
+            <a href="../HomePage/Home.html" data-i18n="navHome">Startseite</a>
+            <a href="../MenuPage/Menu.html" data-i18n="navMenu">Speisekarte</a>
+            <a href="../ContactUsPage/ContactUs.html" data-i18n="navContact">Kontakt</a>
+        </nav>
+
+        <div class="header-right">
+            <a class="instagram-link"
+                href="https://www.instagram.com/stackbross?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank" aria-label="Instagram">
+                <img src="../../images/instagram-brands-solid.png" alt="Instagram">
+            </a>
+
+            <div class="language-switcher"></div>
         </div>
     </header>
 
@@ -54,24 +63,12 @@
             </div>
         </div>
 
-        <div class="contact-form">
-            <h2 data-i18n="contactHeroTitle">Kontaktieren Sie uns</h2>
-            <form action="mailto:info@stackbros.de" method="post" enctype="text/plain">
-                <input type="text" placeholder="Ihr Name" data-i18n-placeholder="fullName" required>
-                <input type="email" placeholder="Ihre E-Mail" data-i18n-placeholder="yourEmail" required>
-                <input type="text" placeholder="Betreff" data-i18n-placeholder="subject">
-                <textarea placeholder="Ihre Nachricht" data-i18n-placeholder="yourMessage" rows="6" required></textarea>
-                <button type="submit" data-i18n="sendMessage">Nachricht senden</button>
-            </form>
-
-            <div class="social-links">
-                <h3 data-i18n="followUs">Folgen Sie uns</h3>
-                <a href="https://www.instagram.com/stackbross?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="../../images/instagram-brands-solid.png" alt="Instagram Icon" width="20"> Instagram</a>
-            </div>
-        </div>
 
         <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2369.1383833600776!2d10.024419784545898!3d53.57314682006836!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18ecdec26be77%3A0xcdbccaf25858c64a!2sHeinrich-Hertz-Stra%C3%9Fe%20102%2C%2022083%20Hamburg%2C%20Germany!5e0!3m2!1sen!2s!4v1780092032327!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2369.1383833600776!2d10.024419784545898!3d53.57314682006836!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18ecdec26be77%3A0xcdbccaf25858c64a!2sHeinrich-Hertz-Stra%C3%9Fe%20102%2C%2022083%20Hamburg%2C%20Germany!5e0!3m2!1sen!2s!4v1780092032327!5m2!1sen!2s"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
@@ -81,4 +78,5 @@
 
     <script src="../Language.js"></script>
 </body>
+
 </html>
