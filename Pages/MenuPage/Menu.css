@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgba(0, 0, 0, 0.92);
@@ -75,7 +79,7 @@ body{
 
 .menu-group{
     margin-bottom: 55px;
-    scroll-margin-top: 90px;
+    scroll-margin-top: 120px;
 }
 
 .menu-group.hidden{
@@ -83,7 +87,7 @@ body{
 }
 
 .menu-group-heading{
-    margin-bottom: 18px;
+    margin-bottom: 24px;
     padding-left: 16px;
     border-left: 4px solid rgb(197, 150, 20);
 }
@@ -107,61 +111,67 @@ body{
     line-height: 1.5;
 }
 
-.menu-table{
+/* --- NEW CARD GRID LAYOUT --- */
+.menu-items-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 items side by side on desktop */
+    gap: 20px;
+}
+
+.menu-item-card {
     background-color: #151515;
     border: 1px solid #333;
     border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    min-height: 140px; /* Keeps cards uniform in height */
 }
 
-.menu-table-head,
-.menu-row{
-    display: grid;
-    gap: 18px;
-    align-items: center;
+.menu-item-card:hover {
+    border-color: rgb(197, 150, 20);
+    transform: translateY(-2px);
 }
 
-.croque-table .menu-table-head,
-.croque-table .menu-row{
-    grid-template-columns: minmax(0, 1fr) 90px 100px 90px;
+.menu-item-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes name to top, price to bottom */
+    padding-right: 15px;
+    flex-grow: 1;
 }
 
-.single-price-table .menu-table-head,
-.single-price-table .menu-row{
-    grid-template-columns: minmax(0, 1fr) 110px;
-}
-
-.menu-table-head{
-    background-color: #050505;
-    color: rgb(197, 150, 20);
-    padding: 14px 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.menu-row{
-    padding: 18px 20px;
-    border-top: 1px solid #2c2c2c;
-}
-
-.menu-row h3{
+.menu-item-content h3 {
     font-size: 21px;
     margin-bottom: 6px;
+    line-height: 1.2;
 }
 
-.menu-row p{
+.menu-item-content .item-desc {
     color: #bcbcbc;
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 12px;
 }
 
-.menu-row > span{
+.menu-item-price {
     color: rgb(197, 150, 20);
     font-weight: bold;
     font-size: 18px;
-    text-align: right;
-    white-space: nowrap;
+    margin-top: auto; /* Ensures price sits securely at the bottom left */
+}
+
+/* Much bigger image on the right */
+.menu-item-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+    background-color: #222; 
 }
 
 .badge{
@@ -181,6 +191,7 @@ body{
     padding: 25px;
 }
 
+/* Mobile Adjustments */
 @media (max-width: 760px){
     .menu-hero{
         min-height: 45vh;
@@ -213,23 +224,18 @@ body{
         font-size: 28px;
     }
 
-    .menu-table-head{
-        display: none;
-    }
-
-    .croque-table .menu-row,
-    .single-price-table .menu-row{
+    /* Switch back to 1 column on smaller screens */
+    .menu-items-grid {
         grid-template-columns: 1fr;
-        gap: 10px;
     }
 
-    .menu-row{
-        padding: 18px;
+    /* Keep the image size prominent on mobile, just scale slightly */
+    .menu-item-image {
+        width: 100px;
+        height: 100px;
     }
-
-    .menu-row > span{
-        text-align: left;
+    
+    .menu-item-content h3 {
+        font-size: 18px;
     }
-
-    .menu-row > span::before{ content: attr(data-label) ": "; color: #ddd; }
 }
