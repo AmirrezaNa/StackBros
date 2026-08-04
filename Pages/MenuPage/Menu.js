@@ -83,6 +83,9 @@ function renderMenu() {
     const language = currentLanguage();
     const newLabel = language === "en" ? "NEW" : "NEU";
 
+    // Assuming a global 't' function exists for translations, providing fallback if not
+    const translate = typeof t === "function" ? t : (key) => key;
+
     container.innerHTML = MENU_GROUPS.map(group => {
         const rows = group.items.map(item => {
             const badge = item.isNew ? ` <span class="badge">${newLabel}</span>` : "";
@@ -94,7 +97,7 @@ function renderMenu() {
             const imageHtml = item.image ? `<img src="${item.image}" alt="${itemName}" class="menu-item-image">` : "";
 
             // New Add to Cart Button
-            const addToCartBtn = `<button class="add-to-cart-btn" onclick="addToCart('${itemName}', '${price}')" data-i18n="addToCart">${t("addToCart")}</button>`;
+            const addToCartBtn = `<button class="add-to-cart-btn" onclick="addToCart('${itemName}', '${price}')" data-i18n="addToCart">${translate("addToCart")}</button>`;
 
             return `
                 <article class="menu-item-card">
@@ -145,7 +148,6 @@ window.addToCart = function(name, priceStr) {
     }
     
     updateCartUI();
-    // Notice: We removed the code that automatically opened the cart modal here!
 };
 
 window.updateCartUI = function() {
@@ -204,15 +206,24 @@ window.toggleCart = function() {
     modal.classList.toggle('open');
 };
 
+// ==========================================
+// SPRING BOOT INTEGRATION
+// ==========================================
+// Add this inside menu.js replacing the previous prepareCheckout:
 window.prepareCheckout = function() {
     if (cart.length === 0) {
-        alert(t("emptyCart"));
+        const translate = typeof t === "function" ? t : (key) => key;
+        alert(translate("emptyCart") || "Your cart is empty.");
         return;
     }
     
-    console.log("SENDING TO SPRING BOOT: ", cart);
-    alert("Checkout ready! Open the console (F12) to see your cart data.");
+    // Save cart and current language
+    localStorage.setItem("stackbros_cart", JSON.stringify(cart));
+    localStorage.setItem("stackbros_lang", currentLanguage());
+    
+    window.location.href = "../CheckoutPage/checkout.html";
 };
+
 
 function setupCategoryScroll() {
     const buttons = document.querySelectorAll(".category-btn");

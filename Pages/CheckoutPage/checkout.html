@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Stack Bros</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+    <div class="header-nav">
+        <a href="index.html" class="back-link" id="back-link">&larr; Zurück zur Speisekarte</a>
+    </div>
+
+    <main class="checkout-layout">
+        <!-- Customer Details Section -->
+        <section class="card">
+            <h2 data-i18n="deliveryDetails">Lieferdetails</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="customerName" data-i18n="fullName">Vollständiger Name *</label>
+                    <input type="text" id="customerName" placeholder="Max Mustermann" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customerPhoneNumber" data-i18n="phoneNumber">Telefonnummer *</label>
+                    <input type="tel" id="customerPhoneNumber" placeholder="+49 151 12345678" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customerAddress" data-i18n="deliveryAddress">Lieferadresse *</label>
+                    <textarea id="customerAddress" rows="3" placeholder="Straße & Hausnummer, PLZ, Ort" required></textarea>
+                </div>
+
+                <p id="error-banner" class="error-message"></p>
+                
+                <button type="submit" id="submit-btn" class="btn-submit" data-i18n="placeOrder">Kostenpflichtig bestellen</button>
+            </form>
+        </section>
+
+        <!-- Order Summary Section -->
+        <section class="card">
+            <h2 data-i18n="orderSummary">Bestellübersicht</h2>
+            <div id="summary-items-list"></div>
+            
+            <div class="summary-divider"></div>
+            
+            <div class="summary-total">
+                <span data-i18n="totalAmount">Gesamtsumme</span>
+                <span id="summary-total-price">0,00 €</span>
+            </div>
+        </section>
+    </main>
+
+    <script src="checkout.js"></script>
+</body>
+</html>

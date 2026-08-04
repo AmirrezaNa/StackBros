@@ -1,0 +1,179 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111;
+    color: white;
+    padding: 20px;
+}
+
+/* Header & Back Link */
+.header-nav {
+    max-width: 960px;
+    margin: 10px auto 20px auto;
+}
+
+.back-link {
+    text-decoration: none;
+    color: orange;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: rgb(197, 150, 20);
+    text-decoration: underline;
+}
+
+/* Layout */
+.checkout-layout {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 24px;
+}
+
+.card {
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+    color: orange;
+}
+
+/* Form Controls */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+input[type="text"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: white;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #777;
+}
+
+input:focus,
+textarea:focus {
+    border-color: orange;
+    box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.2);
+}
+
+/* Order Summary */
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #ddd;
+}
+
+.item-details {
+    display: flex;
+    gap: 10px;
+}
+
+.item-qty {
+    font-weight: 700;
+    color: orange;
+}
+
+.summary-divider {
+    height: 1px;
+    background-color: #333;
+    margin: 16px 0;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    margin-top: 10px;
+}
+
+.summary-total span:last-child {
+    color: orange;
+}
+
+/* Actions & Messages */
+.btn-submit {
+    width: 100%;
+    background-color: orange;
+    color: #111;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 20px;
+}
+
+.btn-submit:hover {
+    background-color: rgb(197, 150, 20);
+}
+
+.btn-submit:disabled {
+    background-color: #444;
+    color: #888;
+    cursor: not-allowed;
+}
+
+.error-message {
+    color: #ff5555;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .checkout-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
