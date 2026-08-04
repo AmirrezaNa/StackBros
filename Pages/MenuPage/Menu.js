@@ -87,20 +87,24 @@ function renderMenu() {
         const rows = group.items.map(item => {
             const badge = item.isNew ? ` <span class="badge">${newLabel}</span>` : "";
             const price = item.prices[0]; // Fetching the single price
+            const itemName = text(item.name, language);
             
             const descriptionText = text(item.desc, language);
             const descHtml = descriptionText ? `<p class="item-desc">${descriptionText}</p>` : "";
-            
-            const imageHtml = item.image ? `<img src="${item.image}" alt="${text(item.name, language)}" class="menu-item-image">` : "";
+            const imageHtml = item.image ? `<img src="${item.image}" alt="${itemName}" class="menu-item-image">` : "";
+
+            // New Add to Cart Button
+            const addToCartBtn = `<button class="add-to-cart-btn" onclick="addToCart('${itemName}', '${price}')" data-i18n="addToCart">${t("addToCart")}</button>`;
 
             return `
                 <article class="menu-item-card">
                     <div class="menu-item-content">
                         <div>
-                            <h3>${text(item.name, language)}${badge}</h3>
+                            <h3>${itemName}${badge}</h3>
                             ${descHtml}
                         </div>
                         <div class="menu-item-price">${price}</div>
+                        ${addToCartBtn}
                     </div>
                     ${imageHtml}
                 </article>
@@ -121,6 +125,94 @@ function renderMenu() {
         `;
     }).join("");
 }
+
+// ==========================================
+// CART LOGIC
+// ==========================================
+let cart = [];
+
+window.addToCart = function(name, priceStr) {
+    let price = 0;
+    if (priceStr && priceStr !== "-") {
+        price = parseFloat(priceStr.replace(',', '.').replace(/[^\d.-]/g, ''));
+    }
+    
+    const existingItem = cart.find(item => item.name === name);
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({ name, price, quantity: 1 });
+    }
+    
+    updateCartUI();
+    // Notice: We removed the code that automatically opened the cart modal here!
+};
+
+window.updateCartUI = function() {
+    const countElem = document.getElementById('cart-count');
+    const itemsContainer = document.getElementById('cart-items');
+    const totalElem = document.getElementById('cart-total-price');
+    
+    // New Bottom Bar Elements
+    const bottomBar = document.getElementById('bottom-cart-bar');
+    const bottomTotalElem = document.getElementById('cart-bar-total');
+    
+    if(!countElem || !itemsContainer || !totalElem || !bottomBar) return;
+
+    // Calculate totals
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+    // Update Floating Bar & Modal text
+    countElem.innerText = totalItems;
+    const formattedTotal = totalPrice.toFixed(2).replace('.', ',');
+    totalElem.innerText = formattedTotal;
+    if(bottomTotalElem) bottomTotalElem.innerText = formattedTotal;
+    
+    // Render Items in Sidebar
+    itemsContainer.innerHTML = cart.map((item, index) => `
+        <div class="cart-item">
+            <div class="cart-item-info">
+                <span class="cart-item-title">${item.quantity}x ${item.name}</span>
+                <span class="cart-item-price">${(item.price * item.quantity).toFixed(2).replace('.', ',')} €</span>
+            </div>
+            <button class="remove-btn" onclick="removeFromCart(${index})">X</button>
+        </div>
+    `).join('');
+
+    // Logic to show/hide the bottom bar based on cart state
+    if (cart.length > 0) {
+        bottomBar.classList.remove('hidden');
+    } else {
+        bottomBar.classList.add('hidden');
+        
+        // Optional: Close the modal if they remove the very last item while it is open
+        const modal = document.getElementById('cart-modal');
+        if (modal.classList.contains('open')) {
+            toggleCart();
+        }
+    }
+};
+
+window.removeFromCart = function(index) {
+    cart.splice(index, 1);
+    updateCartUI();
+};
+
+window.toggleCart = function() {
+    const modal = document.getElementById('cart-modal');
+    modal.classList.toggle('open');
+};
+
+window.prepareCheckout = function() {
+    if (cart.length === 0) {
+        alert(t("emptyCart"));
+        return;
+    }
+    
+    console.log("SENDING TO SPRING BOOT: ", cart);
+    alert("Checkout ready! Open the console (F12) to see your cart data.");
+};
 
 function setupCategoryScroll() {
     const buttons = document.querySelectorAll(".category-btn");

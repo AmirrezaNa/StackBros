@@ -49,6 +49,28 @@
         <div id="menu-list"></div>
     </main>
 
+    <div id="cart-modal" class="hidden">
+        <div class="cart-content">
+            <span class="close-cart" onclick="toggleCart()">&times;</span>
+            <h2 data-i18n="yourCart">Dein Warenkorb</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">Total: <span id="cart-total-price">0.00</span> €</div>
+            <button id="checkout-btn" onclick="prepareCheckout()" data-i18n="checkout">Zur Kasse</button>
+        </div>
+    </div>
+
+    <div id="bottom-cart-bar" class="hidden" onclick="toggleCart()">
+        <div class="cart-bar-left">
+            <span id="cart-count">0</span> <span data-i18n="items">Artikel</span>
+        </div>
+        <div class="cart-bar-center" data-i18n="viewCart">
+            Warenkorb ansehen
+        </div>
+        <div class="cart-bar-right">
+            <span id="cart-bar-total">0,00</span> €
+        </div>
+    </div>
+
     <footer class="footer">
         <p data-i18n="rights">© 2026 STACK BROS. Alle Rechte vorbehalten.</p>
     </footer>

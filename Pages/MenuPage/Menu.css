@@ -111,10 +111,9 @@ body{
     line-height: 1.5;
 }
 
-/* --- NEW CARD GRID LAYOUT --- */
 .menu-items-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 items side by side on desktop */
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
@@ -128,7 +127,7 @@ body{
     align-items: stretch;
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     transition: transform 0.2s ease, border-color 0.2s ease;
-    min-height: 140px; /* Keeps cards uniform in height */
+    min-height: 140px;
 }
 
 .menu-item-card:hover {
@@ -139,7 +138,7 @@ body{
 .menu-item-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Pushes name to top, price to bottom */
+    justify-content: space-between;
     padding-right: 15px;
     flex-grow: 1;
 }
@@ -161,10 +160,9 @@ body{
     color: rgb(197, 150, 20);
     font-weight: bold;
     font-size: 18px;
-    margin-top: auto; /* Ensures price sits securely at the bottom left */
+    margin-top: auto;
 }
 
-/* Much bigger image on the right */
 .menu-item-image {
     width: 120px;
     height: 120px;
@@ -185,13 +183,160 @@ body{
     vertical-align: middle;
 }
 
+
+/* --- BOTTOM CART BAR --- */
+#bottom-cart-bar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px; /* Prevents it from being too wide on desktop */
+    background-color: rgb(197, 150, 20);
+    color: black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.8);
+    transition: bottom 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+#bottom-cart-bar:hover {
+    background-color: white;
+}
+
+#bottom-cart-bar.hidden {
+    bottom: -100px; /* Hides it completely off-screen */
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* --- ADD TO CART BUTTON --- */
+.add-to-cart-btn {
+    background-color: rgb(197, 150, 20);
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: white;
+}
+
+/* --- CART MODAL SIDEBAR --- */
+#cart-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    background-color: #111;
+    border-left: 2px solid rgb(197, 150, 20);
+    box-shadow: -5px 0 20px rgba(0,0,0,0.8);
+    z-index: 1001;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%); /* Hidden by default */
+    transition: transform 0.3s ease-in-out;
+}
+
+#cart-modal.open {
+    transform: translateX(0); /* Slides in */
+}
+
+.close-cart {
+    align-self: flex-end;
+    font-size: 32px;
+    cursor: pointer;
+    color: rgb(197, 150, 20);
+    line-height: 1;
+}
+
+#cart-items {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-top: 20px;
+    padding-right: 10px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+}
+
+.cart-item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.cart-item-price {
+    color: #bcbcbc;
+    font-size: 14px;
+}
+
+.remove-btn {
+    background: transparent;
+    color: #ff4c4c;
+    border: 1px solid #ff4c4c;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.remove-btn:hover {
+    background: #ff4c4c;
+    color: white;
+}
+
+.cart-total {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: rgb(197, 150, 20);
+    display: flex;
+    justify-content: space-between;
+}
+
+#checkout-btn {
+    background-color: rgb(197, 150, 20);
+    color: black;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+}
+
 .footer{
     background-color: black;
     text-align: center;
     padding: 25px;
 }
 
-/* Mobile Adjustments */
 @media (max-width: 760px){
     .menu-hero{
         min-height: 45vh;
@@ -237,5 +382,9 @@ body{
     
     .menu-item-content h3 {
         font-size: 18px;
+    }
+
+    #cart-modal {
+        width: 100%; /* Full screen on mobile */
     }
 }

@@ -44,6 +44,12 @@ const TRANSLATIONS = {
         followUs: "Folgen Sie uns",
         created: "Erstellt:",
 
+        addToCart: "In den Warenkorb",
+        yourCart: "Dein Warenkorb",
+        checkout: "Zur Kasse",
+        emptyCart: "Dein Warenkorb ist leer!",
+        items: "Artikel",
+        viewCart: "Warenkorb ansehen"
 
     },
     en: {
@@ -88,6 +94,12 @@ const TRANSLATIONS = {
         followUs: "Follow Us",
         created: "Created:",
 
+        addToCart: "Add to Cart",
+        yourCart: "Your Cart",
+        checkout: "Checkout",
+        emptyCart: "Your cart is empty!",
+        items: "Items",
+        viewCart: "View Cart"
 
     }
 };
