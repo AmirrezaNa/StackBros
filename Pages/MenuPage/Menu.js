@@ -6,11 +6,11 @@ const MENU_GROUPS = [
         title: { de: "Burger", en: "Burgers" },
         note: { de: "Hausgemachte Burger frisch zubereitet.", en: "Homemade burgers freshly prepared." },
         items: [
-            { name: { de: "Stack Bros Spezial", en: "Stack Bros Special" }, desc: { de: "", en: "" }, prices: ["-"], image: "../../images/burger.JPG" },
-            { name: { de: "Cheeseburger", en: "Cheeseburger" }, desc: { de: "", en: "" }, prices: ["-"], image: "../../images/burger.JPG" },
-            { name: { de: "Mushroom Burger", en: "Mushroom Burger" }, desc: { de: "", en: "" }, prices: ["-"], image: "../../images/burger.JPG" },
-            { name: { de: "Bacon Burger", en: "Bacon Burger" }, desc: { de: "", en: "" }, prices: ["-"], image: "../../images/burger.JPG" },
-            { name: { de: "Chicken Burger", en: "Chicken Burger" }, desc: { de: "", en: "" }, prices: ["-"], image: "../../images/burger.JPG" }
+            { name: { de: "Stack Bros Spezial", en: "Stack Bros Special" }, desc: { de: "", en: "" }, prices: ["21.99"], image: "../../images/burger.JPG" },
+            { name: { de: "Cheeseburger", en: "Cheeseburger" }, desc: { de: "", en: "" }, prices: ["15.00"], image: "../../images/burger.JPG" },
+            { name: { de: "Mushroom Burger", en: "Mushroom Burger" }, desc: { de: "", en: "" }, prices: ["16.00"], image: "../../images/burger.JPG" },
+            { name: { de: "Bacon Burger", en: "Bacon Burger" }, desc: { de: "", en: "" }, prices: ["16.00"], image: "../../images/burger.JPG" },
+            { name: { de: "Chicken Burger", en: "Chicken Burger" }, desc: { de: "", en: "" }, prices: ["15.00"], image: "../../images/burger.JPG" }
         ]
     },
     {
@@ -20,11 +20,11 @@ const MENU_GROUPS = [
         title: { de: "Salate", en: "Salads" },
         note: { de: "Frische und knackige Salate.", en: "Fresh and crisp salads." },
         items: [
-            { name: { de: "Caesar Salat mit Hähnchen", en: "Caesar Salad with Chicken" }, desc: { de: "", en: "" }, prices: ["-"], image: "../../images/CaesarSalat.JPG" },
-            { name: { de: "Thunfisch Salat", en: "Tuna Salad" }, desc: { de: "", en: "" }, prices: ["-"], image: "path/to/your/image.jpg" },
-            { name: { de: "Ziegenkäse Salat", en: "Goat Cheese Salad" }, desc: { de: "", en: "" }, prices: ["-"], image: "path/to/your/image.jpg" },
-            { name: { de: "Schafskäse Salat", en: "Feta Cheese Salad" }, desc: { de: "", en: "" }, prices: ["-"], image: "../../images/Schafskäse.JPG" },
-            { name: { de: "Chef Salat", en: "Chef Salad" }, desc: { de: "", en: "" }, prices: ["-"], image: "path/to/your/image.jpg" }
+            { name: { de: "Caesar Salat mit Hähnchen", en: "Caesar Salad with Chicken" }, desc: { de: "", en: "" }, prices: ["15.90"], image: "../../images/CaesarSalat.JPG" },
+            { name: { de: "Thunfisch Salat", en: "Tuna Salad" }, desc: { de: "", en: "" }, prices: ["12.90"], image: "path/to/your/image.jpg" },
+            { name: { de: "Ziegenkäse Salat", en: "Goat Cheese Salad" }, desc: { de: "", en: "" }, prices: ["11.50"], image: "path/to/your/image.jpg" },
+            { name: { de: "Schafskäse Salat", en: "Feta Cheese Salad" }, desc: { de: "", en: "" }, prices: ["11.50"], image: "../../images/Schafskäse.JPG" },
+            { name: { de: "Chef Salat", en: "Chef Salad" }, desc: { de: "", en: "" }, prices: ["15.90"], image: "path/to/your/image.jpg" }
         ]
     },
     {
@@ -37,19 +37,19 @@ const MENU_GROUPS = [
             en: "Lunch Offer: Any Croque + Drink for only €10.99" 
         },
         items: [
-            { name: { de: "Hawaii", en: "Hawaiian" }, desc: { de: "", en: "" }, prices: ["-"], image: "../../images/Hawaii.JPG" },
-            { name: { de: "Schinken Tomaten", en: "Ham & Tomato" }, desc: { de: "", en: "" }, prices: ["-"], image: "../../images/Schinken.JPG" },
-            { name: { de: "Pute Tomaten", en: "Turkey & Tomato" }, desc: { de: "", en: "" }, prices: ["-"], image: "../../images/PuteTomaten.JPG" },
+            { name: { de: "Hawaii", en: "Hawaiian" }, desc: { de: "", en: "" }, prices: ["8.00"], image: "../../images/Hawaii.JPG" },
+            { name: { de: "Schinken Tomaten", en: "Ham & Tomato" }, desc: { de: "", en: "" }, prices: ["8.00"], image: "../../images/Schinken.JPG" },
+            { name: { de: "Pute Tomaten", en: "Turkey & Tomato" }, desc: { de: "", en: "" }, prices: ["8.50"], image: "../../images/PuteTomaten.JPG" },
             { name: { de: "Pute Ananas", en: "Turkey & Pineapple" }, desc: { de: "", en: "" }, prices: ["-"], image: "../../images/PuteAnanas.JPG" },
             { name: { de: "Pute Bacon", en: "Turkey Bacon" }, desc: { de: "", en: "" }, prices: ["-"], image: "../../images/PuteBacon.JPG" },
-            { name: { de: "Salami", en: "Salami" }, desc: { de: "", en: "" }, prices: ["-"], image: "../../images/Salami.JPG" },
-            { name: { de: "Thunfisch", en: "Tuna" }, desc: { de: "", en: "" }, prices: ["-"], image: "../../images/Thunfisch.JPG" },
-            { name: { de: "Crispy Chicken", en: "Crispy Chicken" }, desc: { de: "", en: "" }, prices: ["-"], image: "../../images/CrispyChicken.JPG" },
-            { name: { de: "Schafskäse", en: "Feta Cheese" }, desc: { de: "", en: "" }, prices: ["-"], image: "../../images/Schafskäse.JPG" },
-            { name: { de: "Ziegenkäse", en: "Goat Cheese" }, desc: { de: "", en: "" }, prices: ["-"], image: "../../images/Ziegenkäse.JPG" },
-            { name: { de: "Mozzarella", en: "Mozzarella" }, desc: { de: "", en: "" }, prices: ["-"], image: "../../images/Mozzarella.JPG" },
-            { name: { de: "Camembert", en: "Camembert" }, desc: { de: "", en: "" }, prices: ["-"], image: "../../images/Camembert.JPG" },
-            { name: { de: "Frikadelle", en: "Meatball" }, desc: { de: "", en: "" }, prices: ["-"], image: "../../images/Frikadelle.JPG" }
+            { name: { de: "Salami", en: "Salami" }, desc: { de: "", en: "" }, prices: ["8.00"], image: "../../images/Salami.JPG" },
+            { name: { de: "Thunfisch", en: "Tuna" }, desc: { de: "", en: "" }, prices: ["8.50"], image: "../../images/Thunfisch.JPG" },
+            { name: { de: "Crispy Chicken", en: "Crispy Chicken" }, desc: { de: "", en: "" }, prices: ["9.00"], image: "../../images/CrispyChicken.JPG" },
+            { name: { de: "Schafskäse", en: "Feta Cheese" }, desc: { de: "", en: "" }, prices: ["8.50"], image: "../../images/Schafskäse.JPG" },
+            { name: { de: "Ziegenkäse", en: "Goat Cheese" }, desc: { de: "", en: "" }, prices: ["8.50"], image: "../../images/Ziegenkäse.JPG" },
+            { name: { de: "Mozzarella", en: "Mozzarella" }, desc: { de: "", en: "" }, prices: ["8.50"], image: "../../images/Mozzarella.JPG" },
+            { name: { de: "Camembert", en: "Camembert" }, desc: { de: "", en: "" }, prices: ["8.50"], image: "../../images/Camembert.JPG" },
+            { name: { de: "Frikadelle", en: "Meatball" }, desc: { de: "", en: "" }, prices: ["8.00"], image: "../../images/Frikadelle.JPG" }
         ]
     },
     {
@@ -59,10 +59,10 @@ const MENU_GROUPS = [
         title: { de: "Crêpes", en: "Crêpes" },
         note: { de: "Süße Crêpes zum Genießen.", en: "Sweet crêpes to enjoy." },
         items: [
-            { name: { de: "Nutella", en: "Nutella" }, desc: { de: "", en: "" }, prices: ["-"], image: "path/to/your/image.jpg" },
-            { name: { de: "Nutella-Banane", en: "Nutella & Banana" }, desc: { de: "", en: "" }, prices: ["-"], image: "path/to/your/image.jpg" },
-            { name: { de: "Apfelmus", en: "Applesauce" }, desc: { de: "", en: "" }, prices: ["-"], image: "path/to/your/image.jpg" },
-            { name: { de: "Zimt-Zucker", en: "Cinnamon & Sugar" }, desc: { de: "", en: "" }, prices: ["-"], image: "path/to/your/image.jpg" }
+            { name: { de: "Nutella", en: "Nutella" }, desc: { de: "", en: "" }, prices: ["5.50"], image: "path/to/your/image.jpg" },
+            { name: { de: "Nutella-Banane", en: "Nutella & Banana" }, desc: { de: "", en: "" }, prices: ["6.50"], image: "path/to/your/image.jpg" },
+            { name: { de: "Apfelmus", en: "Applesauce" }, desc: { de: "", en: "" }, prices: ["5.00"], image: "path/to/your/image.jpg" },
+            { name: { de: "Zimt-Zucker", en: "Cinnamon & Sugar" }, desc: { de: "", en: "" }, prices: ["4.50"], image: "path/to/your/image.jpg" }
         ]
     }
 ];
